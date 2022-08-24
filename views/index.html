@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Coin price Update</title>
+         <script src="/socket.io/socket.io.js"></script>
+         <script>
+              const socket=io();
+              socket.on('showUpdatedData',(datas) =>{
+                console.log("......")
+                var strings=[];
+                datas.forEach(function(data)
+                {
+                    var str="";
+                    for(let key in data){
+                        str+=`<p> <b> ${key}</b> = ${data[key]}</p>`;
+                    };
+                    console.log(str);
+                    strings.push(str);
+                })
+                
+
+             
+                
+                document.getElementById("price_updation of coin 1").innerHTML=strings[0];
+                document.getElementById("price_updation of coin 2").innerHTML=strings[1];
+                document.getElementById("price_updation of coin 3").innerHTML=strings[2];
+                document.getElementById("price_updation of coin 4").innerHTML=strings[3];
+              })
+         </script>
+    </head>
+    <body>
+        <h1>Realtime Coin prices (Data's gets updated after every 5 seconds)</h1>
+        <div id="price_updation of coin 1">
+        </div>
+        <p>--------------------------------------------------</p>
+        <div id="price_updation of coin 2">
+        </div>
+        <p>--------------------------------------------------</p>
+        <div id="price_updation of coin 3">
+        </div>
+        <p>--------------------------------------------------</p>
+        <div id="price_updation of coin 4">
+        </div>
+        <p>--------------------------------------------------</p>
+    </body>
+
+</html>
