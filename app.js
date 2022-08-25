@@ -16,6 +16,7 @@ require("./routes/app.routes")(app);
 require("./utils/updationClient")(io);
 
 
+
 http.listen(serverConfig.PORT,()=>{
     console.log('listening on port '+serverConfig.PORT);
 })
