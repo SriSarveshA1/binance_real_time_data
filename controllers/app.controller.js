@@ -6,5 +6,5 @@ exports.getCoinUpdate=(req,res)=>{
 }
 
 exports.badRequest=(req, res)=>{
-    res.sendFile(constants.ABSOLUTE_PATH+"/views/bad.html");
+    res.status(400).sendFile(constants.ABSOLUTE_PATH+"/views/bad.html");
 }
