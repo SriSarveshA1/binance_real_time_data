@@ -20,7 +20,7 @@ module.exports=(io)=>{
          catch(err){
             console.log(err.message);
          }
-        })
+    })
  
 
     io.on('connection',(socket)=>{
