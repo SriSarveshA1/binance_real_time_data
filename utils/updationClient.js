@@ -12,6 +12,7 @@ module.exports=(io)=>{
          try{
      
            client.get(API_LINK,(data,response)=>{
+            
                //data is parsed js object and response is raw object
               
                io.emit("showUpdatedData",data);//so when ever the data we retrived from that binance api for every 5 seconds we try to emit an event.
